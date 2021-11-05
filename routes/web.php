@@ -26,9 +26,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-if(User::count()==0){
+// if(User::count()==0){
     Auth::routes();
-}
+// }
 
 Auth::routes(['register' => false]);
 Route::get('login', [LoginController::class,'showLoginForm'])->name('login');
